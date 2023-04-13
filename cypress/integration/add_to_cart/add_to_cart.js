@@ -20,6 +20,26 @@ Then("o item adicionado deve estar visível", () => {
   cy.isVisibleItemCart();
 });
 
-Then("o item deve ser adicionado ao ícone da navbar", () => {
+And("o item deve ser adicionado ao ícone da navbar", () => {
   cy.isVisibleCartButton();
+});
+
+And("o usuário remove os itens", () => {
+  cy.removeItemsToCart();
+});
+
+When("o usuário ve o item e click em Add to Cart", () => {
+  cy.seeItemAndAddCart();
+});
+
+When("o usuário ve o item e adiciona e remove item", () => {
+  cy.seeItemAndRemoveToCart();
+});
+
+Then("o item adicionado não deve estar visível", () => {
+  cy.isNotVisibleItemCart();
+});
+
+And("o item não deve estar adicionado ao ícone da navbar", () => {
+  cy.isNotVisibleCartButton();
 });
