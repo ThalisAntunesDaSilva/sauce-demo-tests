@@ -10,17 +10,16 @@ Cypress.Commands.add("isVisibleCartButton", () => {
   cy.get(".shopping_cart_badge").should("be.visible");
 });
 
+Cypress.Commands.add("isNotVisibleCartButton", () => {
+  cy.get(".shopping_cart_badge").should("not.exist");
+});
+
 Cypress.Commands.add("removeItemsToCart", () => {
   cy.contains("Remove").click();
   cy.contains("Remove").should("be.visible");
   cy.contains("Remove").click();
   cy.contains("Remove").should("be.visible");
   cy.contains("Remove").click();
-  cy.get(".shopping_cart_badge").should("be.visible");
-});
-
-Cypress.Commands.add("notVisibleCartButton", () => {
-  cy.get(".shopping_cart_badge").should("not.be.visible");
 });
 
 Cypress.Commands.add("navigateToCart", () => {
@@ -34,8 +33,4 @@ Cypress.Commands.add("navigateToRandomProduct", () => {
     const indiceAleatorio = Math.floor(Math.random() * totalItens);
     cy.get(".inventory_item_img > a").eq(indiceAleatorio).click();
   });
-});
-
-Cypress.Commands.add("isVisibleCartButton", () => {
-  cy.get(".shopping_cart_badge").should("be.visible");
 });

@@ -17,6 +17,7 @@
 import "./pages/login";
 import "./pages/home";
 import "./pages/cart";
+import "./pages/item";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
