@@ -8,7 +8,7 @@ When("o usuário clica em Add to Cart para os itens desejados", () => {
   cy.addItemsToCart();
 });
 
-And("navego para página do carrinho", () => {
+And("o usuário navega para página do carrinho", () => {
   cy.navigateToCart();
 });
 
