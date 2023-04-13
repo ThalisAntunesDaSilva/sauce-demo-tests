@@ -14,6 +14,10 @@ Cypress.Commands.add("isNotVisibleCartButton", () => {
   cy.get(".shopping_cart_badge").should("not.exist");
 });
 
+Cypress.Commands.add("inHome", () => {
+  cy.get(".title").should("be.visible");
+});
+
 Cypress.Commands.add("removeItemsToCart", () => {
   cy.contains("Remove").click();
   cy.contains("Remove").should("be.visible");
@@ -24,7 +28,6 @@ Cypress.Commands.add("removeItemsToCart", () => {
 
 Cypress.Commands.add("navigateToCart", () => {
   cy.get(".shopping_cart_link").click();
-  cy.wait(2000);
 });
 
 Cypress.Commands.add("navigateToRandomProduct", () => {

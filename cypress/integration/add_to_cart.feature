@@ -1,6 +1,5 @@
 Feature: Eu como cliente desejo adicionar itens da lista de produtos no carrinho.
 
-  I quero usar o carrinho
 
   Scenario: Adicionar itens no carrinho e verificar na pagina de carrinho e navbar
     Given o usuário faz o login
