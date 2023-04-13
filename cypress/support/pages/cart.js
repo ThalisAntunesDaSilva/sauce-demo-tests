@@ -16,5 +16,5 @@ Cypress.Commands.add("navigateToShopping", () => {
 });
 
 Cypress.Commands.add("navigateToCheckout", () => {
-  cy.get(".shopping_cart_link").click();
+  cy.get("#checkout").click();
 });
