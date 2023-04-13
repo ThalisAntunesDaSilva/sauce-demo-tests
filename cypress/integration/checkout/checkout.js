@@ -8,35 +8,38 @@ When("o usuário clica em Add to Cart para os itens desejados", () => {
   cy.addItemsToCart();
 });
 
-And("navego para página do carrinho", () => {
+And("o usuário navega para página do carrinho", () => {
   cy.navigateToCart();
 });
 
-And("clico em checkout", () => {
+And("o usuário clica em checkout", () => {
   cy.navigateToCheckout();
 });
 
-And("preencho minhas informações", () => {
+And("o usuário preenche as informações", () => {
   cy.fillFormCheckout();
 });
 
-And("não preencho minhas informações", () => {
+And("o usuário não preenche as informações", () => {
   cy.notFillFormCheckout();
 });
 
-And("clico em cancelar", () => {
+And("o usuário clica em cancelar", () => {
   cy.clickCancelCheckout();
 });
 
-Then("devo ir para a home", () => {
+Then("o sistema redireciona para a home", () => {
   cy.inHome();
 });
 
-Then("deve aparecer uma mensagem de erro ao preencher informações", () => {
-  cy.seeMessageError();
-});
+Then(
+  "o sistema deve apresentar uma mensagem de erro ao preencher informações",
+  () => {
+    cy.seeMessageError();
+  }
+);
 
-Then("checo as informações da compra", () => {
+Then("o usuário checa as informações da compra", () => {
   cy.seeStepTwoCheckout();
 });
 
